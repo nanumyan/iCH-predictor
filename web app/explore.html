@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=1031">
+        <title>iCoolhunt</title>
+        <link rel="stylesheet" type="text/css" href="./css/fromICH/bootstrap.min_8805b67.285.css">
+        <link rel="stylesheet" type="text/css" href="./css/fromICH/jquery-bundle.min_8805b67.285.css">
+        <link rel="stylesheet" type="text/css" href="./css/fromICH/icoolhunt-bundle.min_8805b67.285.css">
+        <link rel="stylesheet" type="text/css" href="./css/ui_explore.css">
+        
+        <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        
+        <script type="text/javascript" src="./js/libs/ich_main.js"></script>
+        <script type="text/javascript" src="./js/libs/jquery-bundle.min_8805b67.285.js"></script>
+        <script type="text/javascript" src="./js/libs/wok-bundle.min_8805b67.285.js"></script>
+        <script type="text/javascript" src="./js/libs/icoolhunt_8805b67.285.js"></script>
+        <script type="text/javascript" src="./js/ui_explore.js"></script>
+    </head>
+    <body class="">
+        <div class="navbar ich-main-toolbar navbar-fixed-top">
+            <div class="navbar-inner"><a href="./index.html" class="brand" style="display: none;">
+                    ICOOLHUNT&nbsp;
+                </a><span class="claim" style="display: inline;">
+                    THE WORLD'S FIRST OPEN COMMUNITY OF TRENDSPOTTERS
+                </span>
+                <ul class="nav pull-right">
+                    <li>
+                        <a href="https://www.icoolhunt.com/trending" title="Trending"><i class="icon-trending"></i></a>
+                    </li>
+                    <li>
+                        <button class="btn btn-ich-nb login" data-toggle="modal" href="#ich-login-dialog" type="button">
+                            <i class="icon-user"></i> Login</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-success join" data-toggle="modal" href="#ich-signup-dialog" type="button">
+                            Sign Up!</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="wok-header-wrapper">
+            <div id="wok-header">
+                <a id="logo" class="logo-link" href="./index.html">
+                    <img src="./images/logoICH.png" alt="Logo iCoolhunt" width="181" height="128">
+                </a>
+                <div id="wok-header-navigation">
+                    <ul class="menu inline clearfix">
+                        <li><a href="https://www.icoolhunt.com/getting_started/prey">Getting Started</a></li>
+                        <li><a href="https://www.icoolhunt.com/faq">FAQ</a></li>
+                        <li><a href="https://itunes.apple.com/us/app/icoolhunt/id596411888?l=it&ls=1&mt=8">Mobile</a></li>
+                        <li><a href="https://www.icoolhunt.com/tools">Bookmarklet</a></li>
+                        <li><a href="https://www.icoolhunt.com/cool-data">Cool Data</a></li>
+                        <li class="last"><a href="https://www.icoolhunt.com/about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="wok-body">
+            <div class="ich-tools-toolbar-bumper" style="height: 0px;"></div>
+            <div id="wok-main-panel" class="clearfix">
+                <div class="navbar ich-tools-toolbar navbar-fixed-top free">
+                    <div class="navbar-inner">
+                        <ul class="main-menu clearfix">
+                            <li class="selected"><a href="./iCoolhunt_files/iCoolhunt.html">EXPLORE</a></li>
+                            <li><a data-toggle="modal" href="https://www.icoolhunt.com/explore#ich-login-dialog" title="Tracked">TRACKED</a></li>
+                            <li><a href="https://www.icoolhunt.com/trendboxes">TRENDBOXES</a></li>
+                            <li><a href="https://www.icoolhunt.com/pro">PRO</a></li>
+                        </ul>
+                        <div class="pull-right">
+                            <button type="button" class="btn  btn-ich-nb btn-icon showmap" data-action="showmap" data-map-type="prey" data-api="/wep/explore/map" title="Show on map">
+                                <i class="icon-map-marker"></i></button>
+                            <button type="btn" class="btn  btn-ich-nb btn-icon" data-action="showsearchbox" title="Search">
+                                <i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="explore tools">
+                    <div class="explore search-box hide">
+                    </div>
+                    <div class="explore map-wrapper" style="display: none;">
+                        <div class="explore map"></div>
+                    </div>
+                </div>
+                <div class="explore prediction">
+                    <div id="prey-analysis" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="preyContainer">
+                        <div class="preyBadge" draggable="true"></div>
+                        <div class="preyBadge" draggable="true"></div>
+                        <div class="preyBadge" draggable="true"></div>
+                        <div class="preyBadge" draggable="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="wok-footer">
+                <div class="copy">
+                    © 2012 iCoolhunt Srl - P.IVA 03428550929<br>
+                    <span class="navigation"><a href="https://www.icoolhunt.com/tos">Terms of Service</a> - <a href="https://www.icoolhunt.com/privacy">Privacy Policy</a></span>
+                </div>
+            </div>
+        </div>
+        <div id="to-top" class="hide" style="display: none;">
+            <a class="button-to-top">
+                <span>Back to top</span></a>
+        </div>
+    </body>
+</html>

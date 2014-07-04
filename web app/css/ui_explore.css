@@ -1,0 +1,44 @@
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.prediction {
+    width: 100%;
+    height: 500px;
+    margin-top: 2px;
+    padding: 0;
+}
+
+#preyContainer {
+    float: left;
+    width: 30%;
+    height: 500px;
+    background-color: #F4F4F4;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.preyBadge {
+    width: 99%;
+    height: 100px;
+    background-color: #E8FF23;
+    margin: 4px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: move;
+}
+
+.preyBadge:hover {
+    border: 1px dashed #000;
+}
+
+#prey-analysis {
+    float: left;
+    width: 70%;
+    height: 450px;
+    background-color: #000;
+}
