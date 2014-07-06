@@ -40,5 +40,17 @@
     float: left;
     width: 70%;
     height: 450px;
-    background-color: #000;
+}
+
+#prey-analysis svg text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    fill: white;
+    text-anchor: middle;
+}
+
+#prey-analysis svg circle {
+    stroke: #555;
+    stroke-width: 5px;
+    fill: #999;
 }

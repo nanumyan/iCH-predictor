@@ -1,12 +1,19 @@
 var dragSrcEl = null;
             
 function handleDragStart(e) {
+    var preyBadges = document.querySelectorAll('#preyContainer .preyBadge');
+    [].forEach.call(preyBadges, function(badge) {
+        badge.style.opacity = '1';
+    });
+    
     this.style.opacity = '0.4';
-
     dragSrcEl = this;
-
+    
     e.dataTransfer.effectAllowed = 'move';
     //e.dataTransfer.setData('text/html', this.innerHTML); //after we look at the data
+    
+    hideDragCircle()
+    drawDragCircle()
 }
 
 function handleDragOver(e) {
@@ -14,9 +21,6 @@ function handleDragOver(e) {
       e.preventDefault();
     }
 
-    e.dataTransfer.dropEffect = 'move';
-
-    return false;
 }
 
 function handleDragEnter(e) {
@@ -44,13 +48,18 @@ function handleDrop(e) {
   }
 
 function handleDragEnd(e) {
-    //...
+    hideDragCircle();
 }
 
 function drop(ev) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("Text");
-    ev.target.appendChild(document.getElementById(data));
+
+    removeNails();
+    loadingOn();
+    netFromVocab();
+
+    setTimeout(function(){loadingOff()}, 500);
+    setTimeout(function(){drawNails()}, 500);
 }
 
 function allowDrop(ev) {
@@ -67,4 +76,5 @@ window.onload = function () {
         badge.addEventListener('drop', handleDrop, false);
         badge.addEventListener('dragend', handleDragEnd, false);
     });
+    drawDragCircle()
 };

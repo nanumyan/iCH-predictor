@@ -16,7 +16,6 @@
         <script type="text/javascript" src="./js/libs/jquery-bundle.min_8805b67.285.js"></script>
         <script type="text/javascript" src="./js/libs/wok-bundle.min_8805b67.285.js"></script>
         <script type="text/javascript" src="./js/libs/icoolhunt_8805b67.285.js"></script>
-        <script type="text/javascript" src="./js/ui_explore.js"></script>
     </head>
     <body class="">
         <div class="navbar ich-main-toolbar navbar-fixed-top">
@@ -84,7 +83,16 @@
                     </div>
                 </div>
                 <div class="explore prediction">
-                    <div id="prey-analysis" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="prey-analysis" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <svg id="force-graph" width="708" height="450">
+                            <g id='loading' visibility='hidden'>
+                                <path opacity=".25" d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"/>
+                                <path d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z">
+                                    <animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="0.8s" repeatCount="indefinite" />
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
                     <div id="preyContainer">
                         <div class="preyBadge" draggable="true"></div>
                         <div class="preyBadge" draggable="true"></div>
@@ -104,5 +112,9 @@
             <a class="button-to-top">
                 <span>Back to top</span></a>
         </div>
+        <script src="./js/libs/d3.v3.min.js" charset="utf-8"></script>
+        <script src="./js/predict_web.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/ui_explore.js"></script>
+        <!--<script src="./js/main.js" charset="utf-8"></script>-->
     </body>
 </html>

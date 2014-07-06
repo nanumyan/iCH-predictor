@@ -10,14 +10,14 @@
     margin: 15px 0;
 }
 
-svg text {
+#prey-analysis svg text {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     fill: white;
     text-anchor: middle;
 }
 
-svg circle {
+#prey-analysis svg circle {
     stroke: #555;
     stroke-width: 5px;
     fill: #999;
