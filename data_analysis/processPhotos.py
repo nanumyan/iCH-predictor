@@ -32,6 +32,6 @@ for pid in prey_ids[:5]:
 	photoHSVColors = [convert_color(sRGBColor(*c), HSVColor) for c in photoRGBColors]
 	
 	#write to file [pid - H1 - S1 - V1 - H2 - S2 - V2 - H3 - S3 - V3]
-	fHSV.write("%d\t" % pid + '\t'.join([("%s" % color) for sublist in photoHSVColors for color in sublist])+'\n')
+	fHSV.write('%d\t' % pid + '\t'.join(['\t'.join([str(color.hsv_h), str(color.hsv_s), str(color.hsv_v)]) for color in photoHSVColors])+'\n')
 	
 
