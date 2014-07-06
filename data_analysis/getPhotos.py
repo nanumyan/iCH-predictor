@@ -10,7 +10,7 @@ def getImageFromURL(url, filename, out_folder="/images/"):
     parsed = list(urlparse.urlparse(url))
 
     for image in soup.findAll("img","photo"):
-        print "Image: %(src)s" % image
+        print "Image: %s" % filename
         parsed[2] = image["src"]
         outpath = os.path.join(out_folder, filename)
         if image["src"].lower().startswith("http"):

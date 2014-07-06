@@ -12,7 +12,7 @@ prey_ids = [prey['id'] for prey in preys]
 fRGB = open('RGBcolors.txt', 'w')
 fHSV = open('HSVcolors.txt', 'w')
 
-for pid in prey_ids[:5]:
+for pid in prey_ids:
 	#ich url containing the prey photo
 	purl = 'https://www.icoolhunt.com/prey/%d' % pid
 	
@@ -34,4 +34,5 @@ for pid in prey_ids[:5]:
 	#write to file [pid - H1 - S1 - V1 - H2 - S2 - V2 - H3 - S3 - V3]
 	fHSV.write('%d\t' % pid + '\t'.join(['\t'.join([str(color.hsv_h), str(color.hsv_s), str(color.hsv_v)]) for color in photoHSVColors])+'\n')
 	
-
+fRGB.close()
+fHSV.close()

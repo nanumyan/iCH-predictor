@@ -18,6 +18,7 @@ def get_points(img):
 
 def colorz(filename, n=3):
     img = Image.open(filename)
+    img = img.convert('RGB')
     img.thumbnail((200, 200))
     w, h = img.size
 
