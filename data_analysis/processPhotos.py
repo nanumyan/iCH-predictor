@@ -5,6 +5,7 @@ from getColors import colorz
 from colorsys import rgb_to_hsv
 from colormath.color_conversions import convert_color
 from colormath.color_objects import sRGBColor, HSLColor, HSVColor
+import urllib2
 
 preys    = json.load(open('subjsons/preys.json','r'))
 prey_ids = [prey['id'] for prey in preys]
@@ -12,12 +13,17 @@ prey_ids = [prey['id'] for prey in preys]
 fRGB = open('RGBcolors.txt', 'a')
 fHSV = open('HSVcolors.txt', 'a')
 
-for pid in prey_ids:
+for pid in prey_ids[1787:]:
 	#ich url containing the prey photo
 	purl = 'https://www.icoolhunt.com/prey/%d' % pid
 	
-	#downloads the photo to images/ dir
-	getImageFromURL(purl, str(pid), 'images/')
+        #downloads the photo to images/ dir
+        try:
+            getImageFromURL(purl, str(pid), 'images/')
+        except urllib2.HTTPError:
+            with open('processError.log', 'a') as err:
+                err.write('%s\t%s\n' % (pid, 'HTTP Error'))
+            continue
 	
 	#file to be analyzed
 	filename = 'images/%d' % pid
@@ -27,7 +33,7 @@ for pid in prey_ids:
             photoRGBColors = colorz(filename, n=3)
         except IOError:
             with open('processError.log', 'a') as err:
-                err.write('%s\n' % pid)
+                err.write('%s\t%s\n' % (pid, 'image IOError'))
             continue
 	
 	#write to file [pid - R1 - G1 - B1 - R2 - G2 - B2 - R3 - G3 - B3]
