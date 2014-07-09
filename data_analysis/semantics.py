@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 def checkPower(colors):
 	cnt = dict(Vigorous = 0, Powerful = 0, Robust = 0, Strong = 0)
 	
@@ -16,7 +18,7 @@ def checkPower(colors):
 def checkPassion(colors):
 	cnt = dict(Passionate = 0, Desirous = 0, Romantic = 0, Sensitive = 0)
 	
-	for h, s, l in colors:
+        for h, s, l in colors:
 		if (h == 0 or h == 330) and s > 75 and s <= 100 and l >= 40 and l <= 60:
 			cnt['Passionate'] += 1
 		elif h > 330 and s > 75 and s <= 100 and l >= 40 and l <= 60:
@@ -113,7 +115,7 @@ def checkTemp(colors):
 			cnt['Cold'] += 1				
 	return cnt
 
-def checkTemp(checkPurity):
+def checkPurity(colors):
 	cnt = dict(Intricate = 0, Bold = 0, Innocent = 0, Pure = 0)
 	
 	for h, s, l in colors:
@@ -126,3 +128,23 @@ def checkTemp(checkPurity):
 		elif (h == 0 or h >= 300) and l >= 90 and s <= 25:
 			cnt['Pure'] += 1
 	return cnt
+
+
+def orderedsem(colors):
+        semantics = OrderedDict()
+        semantics.update( checkTemp(colors) )
+        semantics.update( checkLight(colors) )
+        semantics.update( checkEnergy(colors) )
+        semantics.update( checkPower(colors) )
+        semantics.update( checkPurity(colors) )
+        semantics.update( checkBlue(colors) )
+        semantics.update( checkEase(colors) )
+        semantics.update( checkJoy(colors) )
+
+        return semantics
+        
+def checkAll(colors):
+        return orderedsem(colors).values()
+        
+def semanticsNames():                
+        return dict(enumerate( orderedsem([[0,0,0],[0,0,0],[0,0,0]]).keys() ))

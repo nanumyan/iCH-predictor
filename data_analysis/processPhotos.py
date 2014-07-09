@@ -6,9 +6,7 @@ from colorsys import rgb_to_hsv
 from colormath.color_conversions import convert_color
 from colormath.color_objects import sRGBColor, HSLColor, HSVColor
 import urllib2
-
-preys    = json.load(open('subjsons/preys.json','r'))
-prey_ids = [prey['id'] for prey in preys]
+import os
 
 fRGB = open('RGBcolors.txt', 'a')
 fHSV = open('HSVcolors.txt', 'a')
