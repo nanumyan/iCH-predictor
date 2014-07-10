@@ -122,21 +122,18 @@
         <script src="./js/libs/imagesloaded.pkgd.min.js"></script>
         <script src="./js/isoConfig.js"></script>
         <script src="./js/preyView.js"></script>
-        <script src="./js/libs/jquery.lazyload.min.js" ></script>
         <style>
             .dropdown:hover .dropdown-menu {
                 display: block;
              }
         </style>
         
-        <script>
-            //$('.dropdown-toggle').dropdown();
-            
+        <script>            
             $.ajax({
               dataType: "json",
               url: "./data/final_feeds.json"
             }).done(function(data) {
-                var imgLen = 1500
+                var imgLen = 300
                   for(var i=0;i<imgLen;i++){
                     var d = data[i];                      
                     var cols = d.colors;
@@ -151,8 +148,8 @@
                         'class' : 'itemImage'
                     }).appendTo('#item_'+d.id).append(
                         $('<img/>', {
-                            'data-original' : 'images/' + d.id,
-                            'class'         : 'lazy'
+                            'src' : 'images/' + d.id,
+                            'class'         : 'bleh'
                         }),
                         $('<figcaption/>', {
                             html : d.descr,
@@ -166,14 +163,6 @@
                     $('#item_'+d.id).data('preyData', d);                      
                 }
                 
-                $(function() {
-                    $("img.lazy").lazyload({
-                        threshold : 200,
-                        effect : "fadeIn",
-                        'failure_limit' : Math.max(imgLen - 1, 0)
-                    });
-                });
-                
                 var $container = $('.itemsDiv');
                 $container.imagesLoaded(function() {
                     $container.isotope({
@@ -186,12 +175,6 @@
                             queue: false
                         }
                     })
-                });
-                
-                $container.isotope({
-                    onLayout: function() {
-                         $(window).trigger("scroll");
-                    }
                 });
 
                 $('.filters a').click(function(){
@@ -219,12 +202,6 @@
                                 queue: false
                             }
                          })
-                    });
-                    
-                    $container.isotope({
-                        onLayout: function() {
-                             $(window).trigger("scroll");
-                        }
                     });
                     
                      return false;
