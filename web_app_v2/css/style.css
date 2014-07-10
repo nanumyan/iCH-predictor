@@ -238,10 +238,14 @@ figcaption {
 }
 
 
+#preyPhoto img {
+    max-height: 100%;
+}
 
 
-
-
+svg text {
+    fill: #c8c8c8; 
+}
 
 
 
