@@ -61,7 +61,9 @@ $('.itemsDiv').on('click', '.item', function() {
 $('#buttonPredict').click(function(){
     //hide all divs
     hideAllDivs();
-
+    
+    window.scrollTo(0,0);
+    
     //show prediction div
     $('#predictionDiv').show();
 });
