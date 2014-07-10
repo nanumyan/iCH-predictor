@@ -136,8 +136,8 @@
               dataType: "json",
               url: "./data/final_feeds.json"
             }).done(function(data) {
-                
-                  for(var i=0;i<50;i++){
+                var imgLen = 1500
+                  for(var i=0;i<imgLen;i++){
                     var d = data[i];                      
                     var cols = d.colors;
                       
@@ -169,7 +169,8 @@
                 $(function() {
                     $("img.lazy").lazyload({
                         threshold : 200,
-                        effect : "fadeIn"
+                        effect : "fadeIn",
+                        'failure_limit' : Math.max(imgLen - 1, 0)
                     });
                 });
                 
@@ -185,6 +186,12 @@
                             queue: false
                         }
                     })
+                });
+                
+                $container.isotope({
+                    onLayout: function() {
+                         $(window).trigger("scroll");
+                    }
                 });
 
                 $('.filters a').click(function(){
@@ -213,6 +220,13 @@
                             }
                          })
                     });
+                    
+                    $container.isotope({
+                        onLayout: function() {
+                             $(window).trigger("scroll");
+                        }
+                    });
+                    
                      return false;
                 });
             });
