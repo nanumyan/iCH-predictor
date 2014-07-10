@@ -22,19 +22,29 @@ function hideAllDivs(){
     //...
 }
 
-$('.item').click(function(){
+$('.itemsDiv').on('click', '.item', function() {
     //hide any active div
     hideAllDivs();
     
-    //get prey data from item
-    //$data = this.data('preyData')
+    //empty prior shite
+    $('#preyPhoto').empty()
+    $('#preyTitle').empty()
     
-    //attach data to the prey view
+    //get prey data from item
+    var preyData = $(this).data('preyData')
+    
+    //populate prew viewer divs with replace
+    $('#preyPhoto').append('<img class="img-thumbnail" src="./images/' + preyData.id + '">')
+    $('#preyTitle').append('<h1 class="navbar-brand">' + preyData.descr + '</h1>')
+    
+    $('#preyLink').html(preyData.link)
+    $('#preyTags').html(preyData.tags.join(', '))
     
     //show prey viewer
     $('#preyViewDiv').show();
+    
+    showSemantics(preyData);
 });
-
 
 //------------------------------------------------predict UI stuff----------------------------------------//
 

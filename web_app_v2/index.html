@@ -22,10 +22,10 @@
               <div class="filters">
                <ul class="nav navbar-nav">
                  <li class="active"><a href="#" data-filter="*">All</a></li>
-                 <li><a data-filter=".w1s" href="#">word1</a></li>
-                 <li><a data-filter=".w2s" href="#">word2</a></li>
-                 <li><a data-filter=".w3s" href="#">word3</a></li>
-                 <li><a data-filter=".w4s" href="#">word4</a></li>
+                 <li><a data-filter=".Original" href="#">word1</a></li>
+                 <li><a data-filter=".Smart" href="#">word2</a></li>
+                 <li><a data-filter=".Aesthetic" href="#">word3</a></li>
+                 <li><a data-filter=".Stimulating" href="#">word4</a></li>
                </ul>
               </div>
               <button id="buttonPredict" type="button" class="btn btn-default navbar-btn navbar-right">Predict</button>
@@ -34,136 +34,9 @@
         </div>
         <!--placeholder -->
         <div id="contentDiv">
-            <div class="itemsDiv">
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/126329">
-                        <figcaption>test figcaption goes here</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/43905">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w2s">
-                    <div class="itemImage">
-                        <img src="images/128282">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/126329">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/128282">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w2s">
-                    <div class="itemImage">
-                        <img src="images/43905">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w3s">
-                    <div class="itemImage">
-                        <img src="images/128282">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/126329">
-                        <figcaption>test figcaption goes here</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/43905">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w2s">
-                    <div class="itemImage">
-                        <img src="images/128282">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/126329">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w1s">
-                    <div class="itemImage">
-                        <img src="images/128282">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w2s">
-                    <div class="itemImage">
-                        <img src="images/43905">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
-                <div class="item w3s">
-                    <div class="itemImage">
-                        <img src="images/128282">
-                        <figcaption>...</figcaption>
-                    </div>
-                    <div class="itemCol1"></div>
-                    <div class="itemCol2"></div>
-                    <div class="itemCol3"></div>
-                </div>
+            <div class="itemsDiv">                
             </div>            
-        </div>
-        
+        </div>        
         
         <div id="predictionDiv">
             <div id="prey-analysis" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -186,37 +59,111 @@
         
         <div id="preyViewDiv">
             <div id="preyGallery">
-                <div id="preyPhoto">
-                    <img class="img-thumbnail" src="./images/126329">
-                    <div class="colblock" style="background-color:red"></div>
-                    <div class="colblock" style="background-color:green"></div>
-                    <div class="colblock" style="background-color:blue"></div>
-                    <div class="colblock" style="background-color:purple"></div>
+                <div id="preyPhoto">                    
                 </div>            
             </div>
             <div id="preyInfo">
-                <div id="preyTitle">
-                    <h1 class="navbar-brand">
-                        NAME OF THE PREY                
-                    </h1>
+                <div id="preyTitle">                    
                 </div>
                 <div class="col-sm-12">
                   <ul id="preyDetail" class="list-group">
-                    <li class="list-group-item desc">desc</li>
-                    <li class="list-group-item tags">link</li>
-                    <li class="list-group-item link">tags</li>
+                    <li id="preyLink" class="list-group-item"></li>
+                    <li id="preyTags" class="list-group-item"></li>
                   </ul>
                 </div>
                 <div id="preySemantics"></div>
             </div>
-        </div>        
+        </div>
+        
+        
         
         <script src="./js/libs/d3.v3.min.js" charset="utf-8"></script>
         <script src="./js/d3_predict.js" charset="utf-8"></script>
         <script src="./js/ui.js"></script>
         <script src="./js/libs/bootstrap.js"></script>
         <script src="./js/libs/isotope.pkgd.min.js"></script>
+        <script src="./js/libs/imagesloaded.pkgd.min.js"></script>
         <script src="./js/isoConfig.js"></script>
-        <script src="./js/preyView.js"></script>
+        <script src="./js/preyView.js"></script>   
+        
+        <script>
+            $.ajax({
+              dataType: "json",
+              url: "./data/final_feeds.json"
+            }).done(function(data) {
+                
+                  for(var i=0;i<500;i++){
+                    var d = data[i];                      
+                    var cols = d.colors;
+                      
+                    $('<div/>',{
+                        'id'    : 'item_' + d.id,
+                        'class' : 'item ' + d.semanticClass
+                    }).appendTo('.itemsDiv');
+                      
+                    $('<div/>',{
+                        'id'    : 'itemImage_' + d.id,
+                        'class' : 'itemImage'
+                    }).appendTo('#item_'+d.id).append(
+                        $('<img/>', {
+                            'src' : 'images/' + d.id,
+                        }),
+                        $('<figcaption/>', {
+                            html : d.descr,
+                        })
+                    );
+
+                    $('<div class="itemCol1" style="background-color:' + cols[0] +'"></div>').insertAfter($('#itemImage_'+d.id));
+                    $('<div class="itemCol2" style="background-color:' + cols[1] +'"></div>').insertAfter($('#itemImage_'+d.id));
+                    $('<div class="itemCol3" style="background-color:' + cols[2] +'"></div>').insertAfter($('#itemImage_'+d.id));
+
+                    $('#item_'+d.id).data('preyData', d);                      
+                    console.log(d.descr); 
+                }
+                
+                var $container = $('.itemsDiv');
+    $container.imagesLoaded(function() {
+        $container.isotope({
+            filter: '*',
+            itemSelector: '.item',
+            layoutMode: 'masonry',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        })
+    });
+ 
+    $('.filters a').click(function(){
+        $('.filters .active').closest('li').removeClass('active');
+        $(this).closest('li').addClass('active');
+        
+        //hide preyView
+        $('#preyViewDiv').hide();
+
+        //hide userView
+        $('#userViewDiv').hide();
+
+        //hide prediction view
+        $('#predictionDiv').hide();
+ 
+        var selector = $(this).attr('data-filter');
+        $container.imagesLoaded(function() {
+            $container.isotope({filter: selector,
+                itemSelector: '.item',
+                layoutMode: 'masonry',
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+             })
+        });
+         return false;
+    });
+                
+            });
+        </script>
     </body>
 </html>
