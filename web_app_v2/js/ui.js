@@ -1,3 +1,5 @@
+var colors = ["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]
+
 //------------------------------------------------explore UI stuff----------------------------------------//
 function hideAllDivs(){
     //hide preyView
@@ -22,6 +24,12 @@ function hideAllDivs(){
     //...
 }
 
+function url_domain(data) {
+  var    a      = document.createElement('a');
+         a.href = data;
+  return a.hostname;
+}
+
 $('.itemsDiv').on('click', '.item', function() {
     //hide any active div
     hideAllDivs();
@@ -37,7 +45,7 @@ $('.itemsDiv').on('click', '.item', function() {
     $('#preyPhoto').append('<img class="img-thumbnail" src="./images/' + preyData.id + '">')
     $('#preyTitle').append('<h1 class="navbar-brand">' + preyData.descr + '</h1>')
     
-    $('#preyLink').html(preyData.link)
+    $('#preyLink').append('<a href="' + preyData.link + '" target="_blank">' + url_domain(preyData.link) + '</a>')
     $('#preyTags').html(preyData.tags.join(', '))
     
     window.scrollTo(0,0);
