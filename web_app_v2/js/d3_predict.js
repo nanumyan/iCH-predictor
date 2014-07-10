@@ -13,11 +13,10 @@ var config = {
 
 var vocab   = {
     "words": [
-        {"label": "original", "position": 1},
-        {"label": "smart", "position": 2},
-        {"label": "provocative", "position": 3},
-        {"label": "aesthetic", "position": 4},
-        {"label": "cute", "position": 5}
+        {"label": "Aesthetic", "position": 1},
+        {"label": "Original", "position": 2},
+        {"label": "Smart", "position": 3},
+        {"label": "Stimulating", "position": 4},
     ]
 }
 

@@ -143,7 +143,8 @@ figcaption {
 
 #predictionDiv{
     display: none;
-    width: 100%;
+    width: 1000px;
+    margin: 50px auto 0 auto;
     height: 500px;
     margin-top: 2px;
     padding: 0;
@@ -158,7 +159,7 @@ figcaption {
 
 #preyContainer {
     float: left;
-    width: 30%;
+    width: 35%;
     height: 500px;
     background-color: #F4F4F4;
     padding: 0;
@@ -183,7 +184,7 @@ figcaption {
 
 #prey-analysis {
     float: left;
-    width: 70%;
+    width: 65%;
     height: 450px;
 }
 

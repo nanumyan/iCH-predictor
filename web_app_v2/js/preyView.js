@@ -1,4 +1,3 @@
-var colors = ["#66c2a5","#fc8d62","#8da0cb","#e78ac3","#a6d854","#ffd92f","#e5c494","#b3b3b3"]
 
 //d3.json(preyData, function(data){
 //    console.log('preyData', data)
@@ -60,14 +59,14 @@ function showSemantics(preyData){
         .style('fill', 'white')
         .attr('opacity', 0.3)
         .attr('x', 80)
-        .attr('height', 9)
+        .attr('height', 12)
         .attr('width', 200)
     
     bar.append('rect')
         .style('fill', function(d,i){ return colors[i]; })
         .attr('x', 80)
         //.attr('y', function(d,i){ return 10*i; })
-        .attr('height', 9)
+        .attr('height', 12)
         .attr('width', 0)
         .transition()
         .duration(1000)
@@ -82,15 +81,19 @@ function showSemantics(preyData){
     ////////////
     
     var colorRecs = svgPreyView.append('g')
-        .attr('transform', 'translate(5,100)')
-        
+        .attr('transform', 'translate(0,120)')
+    
+    colorRecs.append('text')
+        .text('Main colors')
+    
     colorRecs.selectAll('rect')
         .data(preyData.colors)
         .enter()
         .append('rect')
         .attr('width', 23)
         .attr('height', 23)
-        .attr('x', function(d,i){ return 28*i; })
+        .attr('x', function(d,i){ return 5+28*i; })
+        .attr('y', 15)
         .attr('stroke', 'white')
         .attr('stroke-width', 1.5)
         .attr('stroke-opacity', .8)
