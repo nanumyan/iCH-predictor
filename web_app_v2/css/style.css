@@ -1,0 +1,255 @@
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+}
+
+#contentDiv {
+	width: 100%;
+	margin: 51px 0 0 0;
+    padding: 0;
+}
+
+.item { 
+    width: 25%;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    background-color: white;
+}
+
+.itemImage img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+          transition: all .5s ease;
+}
+
+.itemImage img:hover {
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+    -ms-transform: scale(2);
+}
+
+figcaption {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0,0,0,.45);
+    color: white;
+    font-size: 0.7em;
+    z-index: 100;
+}
+
+.itemImage:hover caption {
+    display: block;
+}
+
+.isotope-item {
+    z-index: 2;
+}
+ 
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+ 
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+ 
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+ 
+/**** disabling Isotope CSS3 transitions ****/
+ 
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.itemCol1{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 15px;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    background-color: red;
+}
+
+.itemCol2{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 15px;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    background-color: green;
+}
+
+.itemCol3{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 15px;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    background-color: blue;
+}
+
+.item:hover .itemCol1, .item:hover .itemCol2, .item:hover .itemCol3, .item:hover figcaption {
+    display: block;
+}
+
+/*----------------------------------------------------- predict styles ---------------------------------------------------*/
+
+#predictionDiv{
+    display: none;
+    width: 100%;
+    height: 500px;
+    margin-top: 2px;
+    padding: 0;
+}
+
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#preyContainer {
+    float: left;
+    width: 30%;
+    height: 500px;
+    background-color: #F4F4F4;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.preyBadge {
+    width: 99%;
+    height: 100px;
+    background-color: #E8FF23;
+    margin: 4px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: move;
+}
+
+.preyBadge:hover {
+    border: 1px dashed #000;
+}
+
+#prey-analysis {
+    float: left;
+    width: 70%;
+    height: 450px;
+}
+
+#prey-analysis svg text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    fill: white;
+    text-anchor: middle;
+}
+
+#prey-analysis svg circle {
+    stroke: #555;
+    stroke-width: 5px;
+    fill: #999;
+}
+
+/*----------------------------------------------------- preyview styles ---------------------------------------------------*/
+
+#preyViewDiv {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+#preyGallery {
+    height: 100%;
+    float: left;
+    display: block;
+    width: 70%;
+}
+
+#preyPhoto {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#preyInfo {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 30%;
+    display: block;
+    background-color: #3F454B;
+    float: right;
+}
+
+.colblock{
+    width: 40px;
+    height: 40px;
+    float: left
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
