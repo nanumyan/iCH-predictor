@@ -121,8 +121,7 @@
         <script src="./js/libs/isotope.pkgd.min.js"></script>
         <script src="./js/libs/imagesloaded.pkgd.min.js"></script>
         <script src="./js/isoConfig.js"></script>
-        <script src="./js/preyView.js"></script>  
-        <script type="text/javascript"> $(document).ready(function () { $('.dropdown-toggle').dropdown(); }); </script>
+        <script src="./js/preyView.js"></script>
         <style>
             .dropdown:hover .dropdown-menu {
                 display: block;
@@ -130,6 +129,8 @@
         </style>
         
         <script>
+            //$('.dropdown-toggle').dropdown();
+            
             $.ajax({
               dataType: "json",
               url: "./data/final_feeds.json"
@@ -164,47 +165,47 @@
                 }
                 
                 var $container = $('.itemsDiv');
-    $container.imagesLoaded(function() {
-        $container.isotope({
-            filter: '*',
-            itemSelector: '.item',
-            layoutMode: 'masonry',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        })
-    });
- 
-    $('.filters a').click(function(){
-        $('.filters .active').closest('li').removeClass('active');
-        $(this).closest('li').addClass('active');
-        
-        //hide preyView
-        $('#preyViewDiv').hide();
+                $container.imagesLoaded(function() {
+                    $container.isotope({
+                        filter: '*',
+                        itemSelector: '.item',
+                        layoutMode: 'masonry',
+                        animationOptions: {
+                            duration: 750,
+                            easing: 'linear',
+                            queue: false
+                        }
+                    })
+                });
 
-        //hide userView
-        $('#userViewDiv').hide();
+                $('.filters a').click(function(){
+                    $('.filters .active').closest('li').removeClass('active');
+                    $(this).closest('li').addClass('active');
 
-        //hide prediction view
-        $('#predictionDiv').hide();
- 
-        var selector = $(this).attr('data-filter');
-        $container.imagesLoaded(function() {
-            $container.isotope({filter: selector,
-                itemSelector: '.item',
-                layoutMode: 'masonry',
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-             })
-        });
-         return false;
-    });
-                
+                    //hide preyView
+                    $('#preyViewDiv').hide();
+
+                    //hide userView
+                    $('#userViewDiv').hide();
+
+                    //hide prediction view
+                    $('#predictionDiv').hide();
+
+                    var selector = $(this).attr('data-filter');
+                    console.log(selector);
+                    $container.imagesLoaded(function() {
+                        $container.isotope({filter: selector,
+                            itemSelector: '.item',
+                            layoutMode: 'masonry',
+                            animationOptions: {
+                                duration: 750,
+                                easing: 'linear',
+                                queue: false
+                            }
+                         })
+                    });
+                     return false;
+                });
             });
         </script>
     </body>

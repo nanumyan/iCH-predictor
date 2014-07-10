@@ -40,6 +40,8 @@ $('.itemsDiv').on('click', '.item', function() {
     $('#preyLink').html(preyData.link)
     $('#preyTags').html(preyData.tags.join(', '))
     
+    window.scrollTo(0,0);
+    
     //show prey viewer
     $('#preyViewDiv').show();
     
