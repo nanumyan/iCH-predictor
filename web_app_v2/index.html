@@ -22,10 +22,45 @@
               <div class="filters">
                <ul class="nav navbar-nav">
                  <li class="active"><a href="#" data-filter="*">All</a></li>
-                 <li><a data-filter=".Original" href="#">word1</a></li>
-                 <li><a data-filter=".Smart" href="#">word2</a></li>
-                 <li><a data-filter=".Aesthetic" href="#">word3</a></li>
-                 <li><a data-filter=".Stimulating" href="#">word4</a></li>
+                 <li class="dropdown"><a data-filter=".Original" href="#" 
+                                         data-toggle="dropdown" class="dropdown-toggle">Original <b class="caret"></b></a>
+                   <ul class="dropdown-menu">
+                        <li><a data-filter=".Original, .Easing" href="#">Easing</a></li>
+                        <li><a data-filter=".Original, .Inspiring, .Energetic" href="#">Energetic Inspiring</a></li>
+                        <li><a data-filter=".Original, .Sensitive, .Energetic" href="#">Sensitive Energetic</a></li>
+                        <li><a data-filter=".Original, .Lively" href="#">Lively</a></li>
+                        <li><a data-filter=".Original, .Sensitive" href="#">Sensitive</a></li>
+                   </ul>
+                 </li>
+                 <li class="dropdown"><a data-filter=".Aesthetic" href="#" 
+                                         data-toggle="dropdown" class="dropdown-toggle">Aesthetic <b class="caret"></b></a>
+                   <ul class="dropdown-menu">
+                        <li><a data-filter=".Aesthetic, .Luminous, .Energetic" href="#">Luminous Energetic</a></li>
+                        <li><a data-filter=".Aesthetic, .Dark, .Sensitive" href="#">Dark Sensitive</a></li>
+                        <li><a data-filter=".Aesthetic, .Joyous, .Flashy" href="#">Joyous Flashy</a></li>
+                       <li><a data-filter=".Aesthetic, .Powerful" href="#">Powerful</a></li>
+                       <li><a data-filter=".Aesthetic, .Cold" href="#">Cold</a></li>
+                       <li><a data-filter=".Aesthetic, .Warm" href="#">Warm</a></li>
+                       <li><a data-filter=".Aesthetic, .Soothing" href="#">Soothing</a></li>
+                       <li><a data-filter=".Aesthetic, .Lively" href="#">Lively</a></li>                       
+                   </ul>
+                 </li>
+                 <li class="dropdown"><a data-filter=".Smart" href="#" 
+                                         data-toggle="dropdown" class="dropdown-toggle">Smart <b class="caret"></b></a>
+                   <ul class="dropdown-menu">
+                        <li><a data-filter=".Smart, .Luminous, .Natural" href="#">Luminous Natural</a></li>
+                        <li><a data-filter=".Smart, .Serene, .Structural" href="#">Serene Structural</a></li>
+                        <li><a data-filter=".Smart, .Joyous, .Inspiring" href="#">Joyous Inspiring</a></li>
+                        <li><a data-filter=".Smart, .Impressive, .Structural" href="#">Impressive Structural</a></li>
+                   </ul>
+                 </li>
+                 <li class="dropdown"><a data-filter=".Stimulating" href="#" 
+                                         data-toggle="dropdown" class="dropdown-toggle">Stimulating <b class="caret"></b></a>
+                   <ul class="dropdown-menu">
+                        <li><a data-filter=".Stimulating, .Dark" href="#">Dark</a></li>
+                        <li><a data-filter=".Stimulating, .Luminous" href="#">Luminous</a></li>
+                   </ul>
+                 </li>
                </ul>
               </div>
               <button id="buttonPredict" type="button" class="btn btn-default navbar-btn navbar-right">Predict</button>
@@ -86,7 +121,13 @@
         <script src="./js/libs/isotope.pkgd.min.js"></script>
         <script src="./js/libs/imagesloaded.pkgd.min.js"></script>
         <script src="./js/isoConfig.js"></script>
-        <script src="./js/preyView.js"></script>   
+        <script src="./js/preyView.js"></script>  
+        <script type="text/javascript"> $(document).ready(function () { $('.dropdown-toggle').dropdown(); }); </script>
+        <style>
+            .dropdown:hover .dropdown-menu {
+                display: block;
+             }
+        </style>
         
         <script>
             $.ajax({
