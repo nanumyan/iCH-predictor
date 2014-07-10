@@ -122,6 +122,7 @@
         <script src="./js/libs/imagesloaded.pkgd.min.js"></script>
         <script src="./js/isoConfig.js"></script>
         <script src="./js/preyView.js"></script>
+        <script src="./js/libs/jquery.lazyload.min.js" ></script>
         <style>
             .dropdown:hover .dropdown-menu {
                 display: block;
@@ -150,7 +151,8 @@
                         'class' : 'itemImage'
                     }).appendTo('#item_'+d.id).append(
                         $('<img/>', {
-                            'src' : 'images/' + d.id,
+                            'data-original' : 'images/' + d.id,
+                            'class'         : 'lazy'
                         }),
                         $('<figcaption/>', {
                             html : d.descr,
@@ -163,6 +165,13 @@
 
                     $('#item_'+d.id).data('preyData', d);                      
                 }
+                
+                $(function() {
+                    $("img.lazy").lazyload({
+                        threshold : 200,
+                        effect : "fadeIn"
+                    });
+                });
                 
                 var $container = $('.itemsDiv');
                 $container.imagesLoaded(function() {
